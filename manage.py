@@ -4,6 +4,28 @@
 import os
 import sys
 
+# OpenTelemetry instrumentation and exporter setup
+from opentelemetry.instrumentation.django import DjangoInstrumentor
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+from opentelemetry.sdk.resources import SERVICE_NAME, Resource
+
+DjangoInstrumentor().instrument()
+
+resource = Resource(attributes={
+    SERVICE_NAME: "django-otel-demo"
+})
+
+provider = TracerProvider(resource=resource)
+otlp_exporter = OTLPSpanExporter(
+    endpoint="http://localhost:4318/v1/traces"  # Change to your Tempo endpoint
+)
+span_processor = BatchSpanProcessor(otlp_exporter)
+provider.add_span_processor(span_processor)
+
+from opentelemetry import trace
+trace.set_tracer_provider(provider)
 
 def main():
     """Run administrative tasks."""

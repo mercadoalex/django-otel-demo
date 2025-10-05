@@ -24,8 +24,7 @@ SECRET_KEY = 'PLACEHOLDER'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -122,3 +121,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+print("DEBUG =", DEBUG)
+print("ALLOWED_HOSTS =", ALLOWED_HOSTS)

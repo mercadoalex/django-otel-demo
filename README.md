@@ -24,40 +24,40 @@ To successfully run this example, we recommend the following VS Code extensions:
 Alejandro Mercado
 
 # Project Structure
-```
-├── .gitignore
-├── manage.py
-├── pyproject.toml
-├── README.md
-├── requirements.txt
-├── .vscode/
-│   ├── launch.json
-│   └── settings.json
-├── hello/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   ├── views.py
-│   ├── migrations/
-│   │   ├── __init__.py
-│   │   └── 0001_initial.py
-│   ├── static/
-│   │   └── hello/
-│   │       └── site.css
-│   └── templates/
-│       └── hello/
-│           ├── about.html
-│           ├── home.html
-│           ├── layout.html
-│           └── log_message.html
-├── web_django/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-```
+
+- **.gitignore**: Specifies files and folders to be ignored by Git version control.
+- **manage.py**: Django’s command-line utility for administrative tasks and OpenTelemetry instrumentation.
+- **pyproject.toml**: Project metadata and configuration, including dependencies.
+- **requirements.txt**: Lists Python packages required for the project.
+- **tempo.yaml**: Configuration file for Grafana Tempo trace backend.
+- **README.md**: Project documentation and instructions.
+- **.vscode/**: VS Code editor configuration files.
+  - **launch.json**: Debugging configuration for VS Code.
+  - **settings.json**: Workspace-specific settings for VS Code.
+- **hello/**: Main Django app containing core functionality.
+  - **__init__.py**: Marks the directory as a Python package.
+  - **admin.py**: Configuration for Django admin interface.
+  - **apps.py**: App-specific configuration.
+  - **forms.py**: Web forms definitions for user input.
+  - **models.py**: Database models (data structure).
+  - **tests.py**: Unit tests for the app.
+  - **urls.py**: URL routing for the app.
+  - **views.py**: Request handling and business logic.
+  - **migrations/**: Database schema migrations.
+    - **__init__.py**: Marks migrations as a package.
+    - **0001_initial.py**: Initial database migration.
+  - **static/**: Static files (CSS, JS, images).
+    - **hello/**: Static assets for the app.
+      - **site.css**: Stylesheet for the app.
+  - **templates/**: HTML templates for rendering views.
+    - **hello/**: Templates specific to the app.
+      - **about.html**: About page template.
+      - **home.html**: Home page template.
+      - **layout.html**: Base layout template.
+      - **log_message.html**: Template for log messages.
+- **web_django/**: Django project configuration.
+  - **__init__.py**: Marks the directory as a Python package.
+  - **asgi.py**: ASGI entry point for asynchronous servers.
+  - **settings.py**: Project settings and configuration.
+  - **urls.py**: URL routing for the entire project.
+  - **wsgi.py**: WSGI entry point for web servers.
