@@ -19,3 +19,45 @@ To successfully run this example, we recommend the following VS Code extensions:
 - Create and initialize the database by running `python manage.py migrate` in an activated terminal. 
 - Run the app using the Run and Debug view or by pressing `F5`
 - Run tests by running `python manage.py test` in an activated terminal
+
+# Author
+Alejandro Mercado
+
+# Project Structure
+```
+├── .gitignore
+├── manage.py
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── .vscode/
+│   ├── launch.json
+│   └── settings.json
+├── hello/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── migrations/
+│   │   ├── __init__.py
+│   │   └── 0001_initial.py
+│   ├── static/
+│   │   └── hello/
+│   │       └── site.css
+│   └── templates/
+│       └── hello/
+│           ├── about.html
+│           ├── home.html
+│           ├── layout.html
+│           └── log_message.html
+├── web_django/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+```
