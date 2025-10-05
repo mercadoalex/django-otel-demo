@@ -20,6 +20,10 @@ To successfully run this example, we recommend the following VS Code extensions:
 - Run the app using the Run and Debug view or by pressing `F5`
 - Run tests by running `python manage.py test` in an activated terminal
 
+![Project Overview](image00.png)
+
+![Project Overview](image01.png)
+
 # Author
 Alejandro Mercado
 
